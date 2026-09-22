@@ -1,0 +1,115 @@
+/* 全局與背景設定 */
+body {
+    background-color: AntiqueWhite;
+    font-family: "Helvetica Neue", Arial, "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 40px 20px;
+}
+
+/* 主容器 */
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* 標題與段落 */
+h1 {
+    color: SaddleBrown;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #4a3f35;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+/* 圖片展覽區（Flexbox 排版） */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* ----------------------------------
+   卡片結構 (<a> 標籤)
+---------------------------------- */
+.card {
+    display: block;                  /* 讓超連結成為區塊結構 */
+    text-decoration: none;           /* 移除預設藍色底線 */
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;                /* 遮罩，防止圖片放大時超出邊框 */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 卡片浮起漸變 */
+    cursor: pointer;                 /* 滑鼠游標變成點擊手勢 */
+}
+
+/* 圖片容器：專門處理遮罩與限制高度 */
+.img-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;                /* 確保圖片放大不會溢出卡片 */
+}
+
+/* 圖片本體：設定過渡動畫 */
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;               /* 保持圖片比例不變形 */
+    display: block;
+    transition: transform 0.4s ease; /* 控制圖片放大速度 */
+}
+
+/* 卡片下方文字 */
+.card-title {
+    padding: 14px;
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+    background-color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+/* ----------------------------------
+   ✨ 滑鼠懸停 (Hover) 動畫效果核心
+---------------------------------- */
+
+/* 1. 當滑鼠移到卡片上：整張卡片向上浮起 10px，並加深陰影 */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.22);
+}
+
+/* 2. 當滑鼠移到卡片上：裡面的圖片放大 1.15 倍 */
+.card:hover img {
+    transform: scale(1.15);
+}
+
+/* 3. 當滑鼠移到卡片上：文字標題變成巧克力色 */
+.card:hover .card-title {
+    color: Chocolate;
+}
+
+/* 底部「關於我」按鈕 */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    background-color: #f5e6d3;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    color: Chocolate;
+    background-color: #ebd3b7;
+}
