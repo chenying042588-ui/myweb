@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TERRA HATWORKS 棲陸帽藝｜質感帽飾選品</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Noto+Serif+TC:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- 頂部導覽列 -->
+    <header class="navbar">
+        <div class="logo">TERRA <span>HATWORKS</span></div>
+        <nav class="nav-links">
+            <a href="#about">品牌理念</a>
+            <a href="#products">精選系列</a>
+            <button class="cart-btn" onclick="toggleCart()">
+                購物車 (<span id="cart-count">0</span>)
+            </button>
+        </nav>
+    </header>
+
+    <!-- 主視覺區塊 -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="subtitle">AUTUMN & WINTER COLLECTION</p>
+            <h1>大地與日常的穿搭哲學</h1>
+            <p class="desc">嚴選天然面料與精細剪裁，為日常注入優雅與舒適。</p>
+            <a href="#products" class="btn">探索商品系列</a>
+        </div>
+    </section>
+
+    <!-- 品牌簡介 -->
+    <section id="about" class="about-section">
+        <h2>About TERRA</h2>
+        <p>「棲於大地，探索質感生活。」我們致力於將自然溫暖的大地色調融合極簡現代剪裁，打造出修飾臉型且四季皆可配戴的高品質帽飾。</p>
+    </section>
+
+    <!-- 商品列表 -->
+    <section id="products" class="products-section">
+        <div class="section-title">
+            <h2>FEATURED COLLECTION</h2>
+            <p>點擊商品檢視詳細介紹</p>
+        </div>
+
+        <div class="product-grid">
+            <!-- 商品卡片列表 (具備點擊開啟詳細說明功能) -->
+            <div class="product-card" onclick="openModal(1)">
+                <div class="img-container">
+                    <img src="images/01.jpg" alt="經典錨點刺繡棒球帽">
+                    <span class="badge">#01</span>
+                </div>
+                <div class="product-info">
+                    <h3>經典錨點刺繡棒球帽</h3>
+                    <p class="code">NO. #101</p>
+                    <p class="price">NT$ 780</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(2)">
+                <div class="img-container">
+                    <img src="images/02.jpg" alt="戶外探索山形皮標棒球帽">
+                    <span class="badge">#02</span>
+                </div>
+                <div class="product-info">
+                    <h3>戶外探索山形皮標棒球帽</h3>
+                    <p class="code">NO. #102</p>
+                    <p class="price">NT$ 850</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(3)">
+                <div class="img-container">
+                    <img src="images/03.jpg" alt="復古燈芯絨美式英文老帽">
+                    <span class="badge">#03</span>
+                </div>
+                <div class="product-info">
+                    <h3>復古燈芯絨美式英文老帽</h3>
+                    <p class="code">NO. #103</p>
+                    <p class="price">NT$ 820</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(4)">
+                <div class="img-container">
+                    <img src="images/04.jpg" alt="山系透氣網面卡車帽">
+                    <span class="badge">#04</span>
+                </div>
+                <div class="product-info">
+                    <h3>山系透氣網面卡車帽</h3>
+                    <p class="code">NO. #104</p>
+                    <p class="price">NT$ 790</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(5)">
+                <div class="img-container">
+                    <img src="images/05.jpg" alt="美式粗螺紋保暖針織帽">
+                    <span class="badge">#05</span>
+                </div>
+                <div class="product-info">
+                    <h3>美式粗螺紋保暖針織帽</h3>
+                    <p class="code">NO. #201</p>
+                    <p class="price">NT$ 650</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(6)">
+                <div class="img-container">
+                    <img src="images/06.jpg" alt="極簡皮標水手毛線帽">
+                    <span class="badge">#06</span>
+                </div>
+                <div class="product-info">
+                    <h3>極簡皮標水手毛線帽</h3>
+                    <p class="code">NO. #202</p>
+                    <p class="price">NT$ 680</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(7)">
+                <div class="img-container">
+                    <img src="images/07.jpg" alt="日系經典麻花編織針織帽">
+                    <span class="badge">#07</span>
+                </div>
+                <div class="product-info">
+                    <h3>日系經典麻花編織針織帽</h3>
+                    <p class="code">NO. #203</p>
+                    <p class="price">NT$ 720</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(8)">
+                <div class="img-container">
+                    <img src="images/08.jpg" alt="暖色系百搭折邊毛線帽">
+                    <span class="badge">#08</span>
+                </div>
+                <div class="product-info">
+                    <h3>暖色系百搭折邊毛線帽</h3>
+                    <p class="code">NO. #204</p>
+                    <p class="price">NT$ 650</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(9)">
+                <div class="img-container">
+                    <img src="images/09.jpg" alt="度假風經典草編紳士帽">
+                    <span class="badge">#09</span>
+                </div>
+                <div class="product-info">
+                    <h3>度假風經典草編紳士帽</h3>
+                    <p class="code">NO. #301</p>
+                    <p class="price">NT$ 980</p>
+                </div>
+            </div>
+
+            <div class="product-card" onclick="openModal(10)">
+                <div class="img-container">
+                    <img src="images/10.jpg" alt="霧藍親膚羊毛質感針織帽">
+                    <span class="badge">#10</span>
+                </div>
+                <div class="product-info">
+                    <h3>霧藍親膚羊毛質感針織帽</h3>
+                    <p class="code">NO. #304</p>
+                    <p class="price">NT$ 750</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 商品詳細說明彈窗 (Modal) -->
+    <div id="product-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-img">
+                    <img id="modal-image" src="" alt="商品圖片">
+                </div>
+                <div class="modal-details">
+                    <span id="modal-code" class="modal-code"></span>
+                    <h2 id="modal-title"></h2>
+                    <p id="modal-price" class="modal-price"></p>
+                    
+                    <div class="modal-description">
+                        <h4>【商品說明】</h4>
+                        <p id="modal-desc"></p>
+                    </div>
+
+                    <div class="modal-specs">
+                        <h4>【商品規格】</h4>
+                        <ul>
+                            <li><strong>材質：</strong><span id="modal-material"></span></li>
+                            <li><strong>頭圍：</strong><span id="modal-size"></span></li>
+                            <li><strong>洗滌方式：</strong>建議手洗冷水洗滌，平放晾乾</li>
+                        </ul>
+                    </div>
+
+                    <button class="add-to-cart-btn" onclick="addToCartFromModal()">加入購物車</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 側邊購物車滑出欄 (Cart Drawer) -->
+    <div id="cart-drawer" class="cart-drawer">
+        <div class="cart-header">
+            <h3>您的購物車</h3>
+            <span class="close-cart" onclick="toggleCart()">&times;</span>
+        </div>
+        <div id="cart-items" class="cart-items">
+            <!-- 購物車項目動態生成 -->
+            <p class="empty-msg">購物車目前是空的</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>總計金額：</span>
+                <span id="cart-total-price">NT$ 0</span>
+            </div>
+            <button class="checkout-btn" onclick="alert('感謝購買！已導向結帳頁面。')">前往結帳</button>
+        </div>
+    </div>
+    <div id="cart-overlay" class="cart-overlay" onclick="toggleCart()"></div>
+
+    <!-- 頁尾 -->
+    <footer>
+        <p>© 2026 TERRA HATWORKS. All Rights Reserved.</p>
+        <p class="sub-foot">精選大地色系帽飾｜專屬品質保護包裝出貨</p>
+    </footer>
+
+    <!-- 網頁邏輯 JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
